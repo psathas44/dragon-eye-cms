@@ -1,0 +1,42 @@
+<td>
+<div style="margin-top:15px;">
+<div class="corner-bl"><div class="corner-br"><div class="corner-tl"><div class="corner-tr">
+<div id="cdata-text">
+<div class="typeface-js" style="font-family: AntiquaSSK;color:#ffffff;font-size:18px;text-align:center;">
+<div style="display:inline;float:left;margin-left:45px;position:static;">Donate System</div>
+</div>
+<br />
+<div id="sep-medium"></div>
+
+<div align="center" style="font-family: Verdana;color:#f4f9ff;font-size:10px;padding-top:15px;">
+{the_status}
+<form name="donate_system" action="?page=administration&donate" method="post">
+<table border="0" cellspacing="1" cellpadding="3">
+<tr><td>System Status</td><td><select tabindex="1" name="system_status">{system_status}</select></td><td>Currency</td><td><select tabindex="2" name="currency">{currency}</select></td><td>Multiplier:</td><td>x<input name="donate_multiplier" type="text" tabindex="3" value="[config_donate_multiplier]" /></td></tr>
+</table>
+<fieldset style="text-align:left;padding:15px;">
+<legend>Paypal Method</legend>
+<table border="0" cellspacing="1" cellpadding="3">
+<tr><td>Paypal Status</td><td><select tabindex="4" name="paypal_status">{paypal_status}</select></td><td>Mode</td><td><select tabindex="5" name="paypal_mode">{paypal_mode}</select></td><td>Multiplier</td><td>x<input name="paypal_multiplier" type="text" tabindex="6" value="[config_donate_paypal_multiplier]" /></td></tr>
+<tr><td>Paypal Mail</td><td><input name="paypal_mail" type="text" tabindex="7" value="[config_donate_paypal_mail]" /></td></tr>
+</table>
+</fieldset>
+<br /><br />
+<fieldset style="text-align:left;padding:15px;">
+<legend>moneybookers Method</legend>
+<table border="0" cellspacing="1" cellpadding="3">
+<tr><td>moneybookers Status</td><td><select tabindex="8" name="moneybookers_status">{moneybookers_status}</select></td><td>Multiplier</td><td>x<input name="moneybookers_multiplier" type="text" tabindex="9" value="[config_donate_moneybookers_multiplier]" /></td></tr>
+<tr><td>moneybookers Mail</td><td><input name="moneybookers_mail" type="text" tabindex="10" value="[config_donate_moneybookers_mail]" /></td><td>Secret Word</td><td><input name="moneybookers_secret_word" type="text" tabindex="11" value="[config_donate_moneybookers_secret_word]" /></td></tr>
+</table>
+</fieldset>
+<br />
+<input type="submit" id="button" name="save" tabindex="12" value="SAVE" />
+</form>
+
+</div>
+</div>
+</div>
+</div></div></div></div>
+
+</td>
+</tr>

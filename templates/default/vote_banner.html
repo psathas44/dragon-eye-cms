@@ -1,0 +1,43 @@
+<table id="char-details" cellspacing="5" cellpadding="5">
+		<tr>
+		<th>Last Voted</th>
+		<td>{last_voted}</td>
+		<td style="background-color:transparent;color:#ffcfcc;border:1px solid;font-size:9px;">Last time you have voted on this banner.</td>
+		</tr>
+		<th>Vote Delay</th>
+		<td>{vote_delay} hours</td>
+		<td style="background-color:transparent;color:#ffcfcc;border:1px solid;font-size:9px;">Time after you are able to vote again.</td>
+		</tr>		
+		<th>Points Per Vote</th>
+		<td>{points_per_vote}</td>
+		<td style="background-color:transparent;color:#ffcfcc;border:1px solid;font-size:9px;">Vote points you'll get for 1 vote.</td>
+		</tr>
+		<tr>
+		<th>Vote Points</th>
+		<td>{vote_points}</td>
+		<td style="background-color:transparent;color:#ffcfcc;border:1px solid;font-size:9px;">Points aquired from all banners.</td>
+		</tr>
+		</table>
+
+		<br />
+		<br />
+		Click on the next banner to vote on L2Ranking.com
+		<br />
+		<a href="{server_website}" target="_blank"><img src="{banner_image}" border="0"></a>
+		<br />
+		<div class="typeface-js" style="font-family: AntiquaSSK;font-size:15px;">
+		After you vote, you will get a vote code that you must copy it here to get rewarded.
+		<br />
+		<br />
+
+		<form name="make_vote" action="index.php" method="get">
+		<input type="hidden" name="page" value="account" />
+		<input type="hidden" name="vote" value="" />
+		<input type="hidden" name="banner" value="{banner_id}" />
+		<input type="text" name="code" style="width:300px;font-family: AntiquaSSK;text-align:center;" value="Vote Code Here ..." onfocus="if(this.value=='Vote Code Here ...')this.value=''" onblur="if(this.value=='')this.value='Vote Code Here ...'" />
+		</div>
+		{vote_status}
+		<br />
+		<br />
+		<input type="submit" name="claim" value="Claim" />
+		</form>

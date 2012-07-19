@@ -1,0 +1,13 @@
+{status}
+
+<form name="char_settings" action="?page=account&characters&id={char_id}&settings" method="post">
+<table cellspacing="10" cellpadding="5">
+<tr><td>Enable Char Inventory View</td><td><input type="checkbox" name="char_inventory" value="1" {val_inv}/></td></tr>
+
+<tr><td>Enable Char Skills View</td><td><input type="checkbox" name="char_skills" value="1" {val_skills}/></td></tr>
+
+<tr><td>Enable Player Signature View</td><td><input type="checkbox" name="char_banner" value="1" {val_banner}/></td></tr>
+</table>
+<br />
+<input type="submit" name="save" value="Save" />
+</form>

@@ -1,0 +1,26 @@
+	<span>Databases Details</span>
+	
+	<br />
+	
+{step_errors}
+
+	<p><u>Server type it's autodetected, depending on database configurations</u></p>
+	
+<form name="next_step" action="index.php" method="post">
+
+<table border="0" cellspacing="1" cellpadding="3">
+<tr><td>GameServer Hostname :</td><td>LoginServer Hostname :</td><td>Forum Hostname :</td></tr>
+<tr><td><input type="text" id="field" name="hostname_gs" tabindex="1" value="{val_h_gs}" /></td><td><input type="text" id="field" name="hostname_ls" tabindex="5" value="{val_h_ls}" /></td><td><input type="text" id="field" name="hostname_forum" tabindex="9" value="Under Development" onblur="this.value='Under Development';" /></td></tr>
+<tr><td>GameServer User :</td><td>LoginServer User :</td><td>Forum User :</td></tr>
+<tr><td><input type="text" id="field" name="user_gs" tabindex="2" value="{val_u_gs}" /></td><td><input type="text" id="field" name="user_ls" tabindex="6" value="{val_u_ls}" /></td><td><input type="text" id="field" name="user_forum" tabindex="10" value="Under Development" onblur="this.value='Under Development';" /></td></tr>
+<tr><td>GameServer Password :</td><td>LoginServer Password :</td><td>Forum Password :</td></tr>
+<tr><td><input type="password" id="field" name="pass_gs" tabindex="3" value="" /></td><td><input type="password" id="field" name="pass_ls" tabindex="7" value="" /></td><td><input type="text" id="field" name="pass_forum" tabindex="11" value="Under Development" onblur="this.value='Under Development';" /></td></tr>
+<tr><td>GameServer Database :</td><td>LoginServer Database :</td><td>Forum Database :</td></tr>
+<tr><td><input type="text" id="field" name="data_gs" tabindex="4" value="{val_d_gs}" /></td><td><input type="text" id="field" name="data_ls" tabindex="8" value="{val_d_ls}" /></td><td><input type="text" id="field" name="data_forum" tabindex="12" value="Under Development" onblur="this.value='Under Development';" /></td></tr>
+</table>
+{step_done}
+<table align="center">
+
+<tr><td><div id="hover-green"><input type="submit" id="button" name="next" tabindex="13" value="NEXT" /></div></td></tr>
+</table>
+</form>

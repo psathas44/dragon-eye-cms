@@ -1,0 +1,17 @@
+	<form style="display:inline;" action="{paypal_url}" method="post">
+			<input type="hidden" name="cmd" value="_donations">
+			<input type="hidden" name="business" value="{paypal_mail}">
+			<input type="hidden" name="item_name" value="Donation Points - {account_name} account">
+			<input type="hidden" name="lc" value="US">
+			<input type="hidden" name="no_note" value="0">
+			<input type="hidden" name="amount" value="{amount}" />
+			<input type="hidden" name="cancel_return" value="[config_website_url]/?page=account&donate&payment_canceled">
+			<input type="hidden" name="return" value="[config_website_url]/?page=account&donate&payment_done">
+			<input type="hidden" id="notify_url" name="notify_url" value="[config_website_url]/?page=account&donate&ppipn={account_name}">
+			<input type="hidden" name="currency_code" value="{currency}">
+			<input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest">
+			<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+			<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+			</form>
+<br />
+- {paypal_points} points

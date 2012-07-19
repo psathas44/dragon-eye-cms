@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>DragonEye CMS Installation</title>
+
+<style>
+body{background-color:#353535;text-align:center;min-width:806px;}
+
+hr{color:#353535;background-color:#353535;height:1px;border:none;margin-left:5px;margin-right:5px;}
+
+p, tr{font-family:Verdana, sans-serif;color:#8c8c8c;font-size:12px;font-weight:normal;}
+
+span{font-family:Verdana, sans-serif;color:#ffffff;;font-size:14px;font-weight:bold;}
+
+fieldset{list-style:none;padding:15px;margin-top:15px;border:none;}
+
+fieldset legend{color:#8c8c8c;margin-left:-15px;font-style:italic;}
+
+fieldset list{float:left;margin-left:5px;margin-top:-15px;}
+
+fieldset list li{float:left;padding-right:10px;}
+
+fieldset a{color:#dadada;text-decoration:none;font-family:Verdana, sans-serif;font-size:14px;font-weight:normal;}
+
+fieldset a:hover{color:#8c8c8c;}
+
+#button{background-image:url('{button.jpg]');width:76px;height:31px;border:none;color:#ffffff;font-family:Arial;font-size:12px;font-weight:bold;}
+
+#button:hover{filter:alpha(opacity=50);opacity:0.5;}
+
+#field{background-image:url('{agree.jpg]');border:1px solid #181818;color:#8c8c8c;padding:5px;width:200px;margin-top:5px;}
+
+#hover-green:hover{background-color:#00FF00;width:76px;height:31px;}
+
+#hover-red:hover{background-color:#FF0000;width:76px;height:31px;}
+
+#logo{background-image:url('{header.jpg]');width:806px;height:153px;margin-top:35px;}
+
+#footer{background-image:url('{footer.jpg]');background-repeat:no-repeat;width:952px;height:40px;margin-left:-70px;margin-top:15px;padding:15px;}
+
+#data{padding:35px;padding-right:65px;}
+
+#pre-container{border:1px solid #5a5a5a;border-radius:3px;margin-top:15px;}
+
+#container{background-color:#1f1f1f;border:1px solid #181818;border-radius:3px;width:802px;height:100%;}
+
+#pre-menu-bar{border:1px solid #1b1b1b;border-radius:6px;width:720px;height:54px;margin-left:15px;}
+
+#menu-bar{float:left;background-image:url('{install_menu_bg.png]');background-repeat:repeat-x;width:100%;height:54x;border-top:1px solid #626262;border-left:1px solid #626262;border-radius:6px;list-style:none;}
+
+#menu-bar li{float:left;margin:0;padding:0;}
+
+#menu-bar p{margin:0px;font-weight:bold;font-size:13px;}
+
+.default{float:left;color:#aeaeae;text-decoration: none;font-family:Arial;font-size:11px;font-weight:normal;padding:8px 22px;}
+
+.active, .default:hover{background: #dbdbdb url('{menu_active.png]') left no-repeat;color:#1f1f1f;text-decoration:none;font-family:Arial;font-size:11px;float:left;margin:0;padding:8px 12px;font-weight:normal;padding-left:45px;cursor:default;}
+
+#agree-bg{background-image:url('{agree.jpg]');background-repeat:no-repeat;border:none;width:708px;height:328px;}
+
+#wrapper{width:806px;margin:0 auto;text-align:left;}
+
+#copyright{padding-left:50px;font-family:Verdana, sans-serif;color:#8c8c8c;font-size:12px;font-weight:bold;}
+
+#website{display:inline;margin-left:25px;font-weight:normal;font-style:italic;color:#dbdbdb;cursor:default;}
+
+#website:hover{color:#8a8a8a;}
+
+#error{border:1px solid #e10c0c;margin:10px 0px;padding:15px;Arial, Helvetica, sans-serif;font-size:15px;color:#A8000C;background-color:#ffcdd1;}
+
+#success{border:1px solid #4F8A10;margin:10px 0px;padding:15px;Arial, Helvetica, sans-serif;font-size:15px;color:#4F8A10;background-color:#dff2bf;}
+
+#bg-1{position:absolute;background-image:url("{bg_1.gif]");background-repeat:no-repeat;filter:alpha(opacity=10);opacity:0.1;width:490px;height:363px;margin-left:270px;margin-top:80px;}
+
+#bg-2{position:absolute;background-image:url("{bg_2.gif]");background-repeat:no-repeat;filter:alpha(opacity=10);opacity:0.1;width:620px;height:430px;margin-left:160px;margin-top:5px;}
+
+#bg-3{position:absolute;background-image:url("{bg_3.gif]");background-repeat:no-repeat;filter:alpha(opacity=10);opacity:0.1;width:356px;height:504px;margin-left:350px;margin-top:-60px;}
+
+</style>
+
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+
+<script>
+function change_display(q, w, t)
+{
+	
+	if(t==1)
+	{
+	document.getElementById('structure_1_userc').style.display = 'none';
+	document.getElementById('structure_1_ssn').style.display = 'none';
+	document.getElementById('structure_1_userac').style.display = 'none';
+	document.getElementById('structure_1_userau').style.display = 'none';
+	document.getElementById('structure_1_useri').style.display = 'none';
+	document.getElementById('structure_1_builder').style.display = 'none';
+	document.getElementById('structure_1_userdat').style.display = 'none';
+	document.getElementById('structure_1_pledge').style.display = 'none';
+	document.getElementById('structure_1_castle').style.display = 'none';
+	document.getElementById('structure_1_npcboss').style.display = 'none';
+	document.getElementById('structure_1_ally').style.display = 'none';
+	document.getElementById('structure_1_usernob').style.display = 'none';
+	document.getElementById('structure_1_social').style.display = 'none';
+	document.getElementById('structure_1_skills').style.display = 'none';
+	document.getElementById('structure_1_items').style.display = 'none';
+	document.getElementById('structure_2_acc').style.display = 'none';
+	document.getElementById('structure_2_chars').style.display = 'none';
+	document.getElementById('structure_2_clan').style.display = 'none';
+	document.getElementById('structure_2_castle').style.display = 'none';
+	document.getElementById('structure_2_npc').style.display = 'none';
+	document.getElementById('structure_2_raids').style.display = 'none';
+	document.getElementById('structure_2_skills').style.display = 'none';
+	document.getElementById('structure_2_items').style.display = 'none';
+	}
+	document.getElementById(q).style.display = w;
+}
+
+function check_column(c,q,r,p)
+{
+if(window.XMLHttpRequest){xmlhttp=new XMLHttpRequest();}
+else{xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");}  
+xmlhttp.onreadystatechange=function(){
+if(xmlhttp.readyState==4 && xmlhttp.status==200){
+	if(xmlhttp.responseText == 1)
+		document.getElementById(q+"_check").src = '{checkOK.png]';else
+		document.getElementById(q+"_check").src = '{checkNO.png]';}
+		else
+			document.getElementById(q+"_check").src = '{checking.gif]';
+}
+xmlhttp.open("GET","index.php?q="+c+"&r="+r+"&p="+p,true);xmlhttp.send();}
+
+</script>
+
+</head>
+<body>
+
+<div id="wrapper">
+
+<div id="logo"></div>
+
+<div id="pre-container">
+
+	<div id="container">
+
+	<div id="pre-menu-bar">
+
+	<ul id="menu-bar">
+
+	<li><a class="{active_welcome}" href="?reinstall" target="_self">Step 1<p>Welcome</p></a></li>
+	<li><a class="{active_agree}" href="?get_started" target="_self">Step 2<p>Agreement</p></a></li>
+	<li><a class="{active_data}" href="?data" target="_self">Step 3<p>Databases</p></a></li>
+	<li><a class="{active_extra}" href="?extra" target="_self">Step 4<p>Extras</p></a></li>
+	<li><a class="{active_prog}" href="?progress" target="_self">Step 5<p>Install Progress</p></a></li>
+	<li><a class="{active_done}" href="?done" target="_self">Step 6<p>Done</p></a></li>
+
+	</ul>
+	</div>
+
+	<br />
+
+	<hr />
+
+	<div id="data">
+
+		{install_step_data}
+		
+	</div>
+<div id="copyright">
+Official L2DragonEye-CMS Website:
+
+<div id="website" onclick="window.location='http://dragoneyecms.com'">
+http://www.dragoneyecms.com
+</div>
+</div>
+
+	</div>
+
+</div>
+
+<div id="footer"></div>
+
+</div>
+
+</body>
+</html>

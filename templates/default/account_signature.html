@@ -1,0 +1,41 @@
+<br /><br />
+<form action="?page=account&profile&signature" method="post">
+<select tabindex="1" name="accsig_status">{accsig_status}</select>
+<br />
+<input type="submit" id="button" name="save" tabindex="9" value="SAVE" />
+</form>
+<table cellspacing="5" cellpadding="5">
+
+<tr>
+	<th>HTML Code</th>
+	<td>
+	<textarea style="width:500px;height:60px;"><a href="[config_website_url]" target="_blank"><img src="{account_signature}" border="0" width="475" height="114" /></a></textarea>
+	</td>
+</tr>
+<tr>
+	<th>D64 Code</th>
+	<td>
+	<textarea style="width:500px;height:60px;">@a-[config_website_url]-_blank-:@img-{account_signature}-0-475-114-::a@</textarea>
+	</td>
+</tr>
+<tr>
+	<th>Direct Link</th>
+	<td>
+	<textarea style="width:500px;height:60px;">{account_signature}</textarea>
+	</td>
+</tr>
+<tr>
+	<td>&nbsp;</td><td><div id="sep-medium"></div></td>
+</tr>
+<tr>
+	<th><u>Preview</u></th>
+	<td>
+	<a href="[config_website_url]" target="_blank"><img src="{account_signature}" border="0" width="475" height="114" /></a>
+	Signature refreshes every [config_stats_account_signature_cache] seconds
+	</td>
+</tr>
+</table>
+
+<br />
+
+<input type="submit" name="back" value="[lang_back]" onclick="window.location='?page=account&profile'" />

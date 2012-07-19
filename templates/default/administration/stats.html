@@ -1,0 +1,137 @@
+<td>
+<div style="margin-top:15px;">
+<div class="corner-bl"><div class="corner-br"><div class="corner-tl"><div class="corner-tr">
+<div id="cdata-text">
+<div class="typeface-js" style="font-family: AntiquaSSK;color:#ffffff;font-size:18px;text-align:center;">
+<div style="display:inline;float:left;margin-left:45px;position:static;">Stats System</div>
+</div>
+<br />
+<div id="sep-medium"></div>
+
+<div align="center" style="font-family: Verdana;color:#f4f9ff;font-size:10px;padding-top:15px;">
+{the_status}
+<form name="stats_system" action="?page=administration&stats" method="post">
+
+<fieldset style="text-align:left;padding:15px;">
+<legend>TOP PVP Settings</legend>
+<center>
+
+<table cellspacing="5" cellpadding="5">
+<tr><th>System Enabled</th><td><select name="pvp_system" tabindex="1">{pvp_status}</select></td></tr>
+<tr><th>Allow Guests</th><td><select name="pvp_guests" tabindex="2">{pvp_guests}</select></td></tr>
+<tr><th>Total Results</th><td><input type="text" name="pvp_results" value="[config_stats_top_pvp_results]" tabindex="3" /></td></tr>
+<tr><th>Results Per Page</th><td><input type="text" name="pvp_respp" value="[config_stats_top_pvp_results_per_page]" tabindex="4" /></td></tr>
+<tr><th>Cache Time</th><td><input type="text" name="pvp_cache" value="[config_stats_top_pvp_cache]" tabindex="5" /></td></tr>
+</table>
+
+</center>
+</fieldset>
+<br /><br />
+<fieldset style="text-align:left;padding:15px;">
+<legend>TOP PK Settings</legend>
+<center>
+
+<table cellspacing="5" cellpadding="5">
+<tr><th>System Enabled</th><td><select name="pk_system" tabindex="6">{pk_status}</select></td></tr>
+<tr><th>Allow Guests</th><td><select name="pk_guests" tabindex="7">{pk_guests}</select></td></tr>
+<tr><th>Total Results</th><td><input type="text" name="pk_results" value="[config_stats_top_pk_results]" tabindex="8" /></td></tr>
+<tr><th>Results Per Page</th><td><input type="text" name="pk_respp" value="[config_stats_top_pk_results_per_page]" tabindex="9" /></td></tr>
+<tr><th>Cache Time</th><td><input type="text" name="pk_cache" value="[config_stats_top_pk_cache]" tabindex="10" /></td></tr>
+</table>
+
+</center>
+</fieldset>
+<br /><br />
+<fieldset style="text-align:left;padding:15px;">
+<legend>Raid Status Settings</legend>
+<center>
+
+<table cellspacing="5" cellpadding="5">
+<tr><th>System Enabled</th><td><select name="raids_system" tabindex="11">{raids_status}</select></td></tr>
+<tr><th>Allow Guests</th><td><select name="raids_guests" tabindex="12">{raids_guests}</select></td></tr>
+<tr><th>Min Level</th><td><input type="text" name="raids_minl" value="[config_stats_raid_min_level]" tabindex="13" /></td></tr>
+<tr><th>Max Level</th><td><input type="text" name="raids_maxl" value="[config_stats_raid_max_level]" tabindex="14" /></td></tr>
+<tr><th>Cache Time</th><td><input type="text" name="raids_cache" value="[config_stats_raid_cache]" tabindex="15" /></td></tr>
+</table>
+
+</center>
+</fieldset>
+<br /><br />
+<fieldset style="text-align:left;padding:15px;">
+<legend>Castle Status Settings</legend>
+<center>
+
+<table cellspacing="5" cellpadding="5">
+<tr><th>System Enabled</th><td><select name="castle_system" tabindex="16">{castle_status}</select></td></tr>
+<tr><th>Allow Guests</th><td><select name="castle_guests" tabindex="17">{castle_guests}</select></td></tr>
+<tr><th>Cache Time</th><td><input type="text" name="castle_cache" value="[config_stats_castle_cache]" tabindex="18" /></td></tr>
+</table>
+
+</center>
+</fieldset>
+<br /><br />
+<fieldset style="text-align:left;padding:15px;">
+<legend>Player Inventory Settings</legend>
+<center>
+
+<table cellspacing="5" cellpadding="5">
+<tr><th>System Enabled</th><td><select name="items_system" tabindex="19">{items_status}</select></td></tr>
+<tr><th>Allow Guests</th><td><select name="items_guests" tabindex="20">{items_guests}</select></td></tr>
+<tr><th>Warehouse Items</th><td><select name="items_warehouse" tabindex="21">{items_warehouse}</select></td></tr>
+<tr><th>Cache Time</th><td><input type="text" name="items_cache" value="[config_stats_inventory_cache]" tabindex="22" /></td></tr>
+</table>
+
+</center>
+</fieldset>
+<br /><br />
+<fieldset style="text-align:left;padding:15px;">
+<legend>Player Skills Settings</legend>
+<center>
+
+<table cellspacing="5" cellpadding="5">
+<tr><th>System Enabled</th><td><select name="skills_system" tabindex="23">{skills_status}</select></td></tr>
+<tr><th>Allow Guests</th><td><select name="skills_guests" tabindex="24">{skills_guests}</select></td></tr>
+<tr><th>Active Skills</th><td><select name="skills_active" tabindex="25">{skills_active}</select></td></tr>
+<tr><th>Passive Skills</th><td><select name="skills_passive" tabindex="26">{skills_passive}</select></td></tr>
+<tr><th>Cache Time</th><td><input type="text" name="skills_cache" value="[config_stats_skills_cache]" tabindex="27" /></td></tr>
+</table>
+
+</center>
+</fieldset>
+<br /><br />
+<fieldset style="text-align:left;padding:15px;">
+<legend>Total PVP Settings</legend>
+<center>
+
+<table cellspacing="5" cellpadding="5">
+<tr><th>System Enabled</th><td><select name="tpvp_system" tabindex="28">{tpvp_status}</select></td></tr>
+<tr><th>Cache Time</th><td><input type="text" name="tpvp_cache" value="[config_stats_total_pvp_cache]" tabindex="29" /></td></tr>
+</table>
+
+</center>
+</fieldset>
+<br /><br />
+<fieldset style="text-align:left;padding:15px;">
+<legend>Total PK Settings</legend>
+<center>
+
+<table cellspacing="5" cellpadding="5">
+<tr><th>System Enabled</th><td><select name="tpk_system" tabindex="30">{tpk_status}</select></td></tr>
+<tr><th>Cache Time</th><td><input type="text" name="tpk_cache" value="[config_stats_total_pk_cache]" tabindex="31" /></td></tr>
+</table>
+
+</center>
+</fieldset>
+<br /><br />
+
+<br />
+<input type="submit" id="button" name="save" tabindex="32" value="SAVE" />
+
+</form>
+</div>
+</div>
+</div>
+</div></div></div></div>
+
+</td>
+</tr>

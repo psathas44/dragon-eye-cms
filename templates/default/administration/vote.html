@@ -1,0 +1,47 @@
+<td>
+<div style="margin-top:15px;">
+<div class="corner-bl"><div class="corner-br"><div class="corner-tl"><div class="corner-tr">
+<div id="cdata-text">
+<div class="typeface-js" style="font-family: AntiquaSSK;color:#ffffff;font-size:18px;text-align:center;">
+<div style="display:inline;float:left;margin-left:45px;position:static;">Vote System</div>
+</div>
+<br />
+<div id="sep-medium"></div>
+
+<div align="center" style="font-family: Verdana;color:#f4f9ff;font-size:10px;padding-top:15px;">
+{the_status}
+<form name="vote_system" action="?page=administration&vote" method="post">
+<table border="0" cellspacing="1" cellpadding="3">
+<tr><td>System Status</td><td><select tabindex="1" name="system_status">{system_status}</select></td><td>Check Method</td><td><select tabindex="2" name="method">{method}</select></td></tr>
+</table>
+<fieldset style="text-align:left;padding:15px;">
+<legend>L2RANKING</legend>
+<table border="0" cellspacing="1" cellpadding="3">
+<tr>
+<td>Server Link</td><td><input name="l2ranking_server_link" type="text" tabindex="3" value="{l2ranking_server_link}" /></td>
+<td>Server ID</td><td><input name="l2ranking_server_id" type="text" tabindex="4" value="{l2ranking_server_id}" /></td>
+</tr>
+<tr>
+<td>Points Per Vote</td><td><input name="l2ranking_points_pv" type="text" tabindex="5" value="{l2ranking_points_per_vote}"></td>
+<td>Banner Image Link</td><td><input name="l2ranking_banner_link" type="text" tabindex="6" value="{l2ranking_banner_link}"></td>
+</tr>
+</table>
+<center>
+<br />
+<u>Banner Image Preview</u>
+<br /><br />
+<img src="{l2ranking_banner_link}" border="0" />
+</center>
+</fieldset>
+<br /><br />
+<br />
+<input type="submit" id="button" name="save" tabindex="9" value="SAVE" />
+</form>
+
+</div>
+</div>
+</div>
+</div></div></div></div>
+
+</td>
+</tr>

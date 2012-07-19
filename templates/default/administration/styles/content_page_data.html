@@ -1,0 +1,28 @@
+<br /><br />
+Here are listed all the contents of '{cpage_name}' content page ( {cpage_pp} results per page )
+<br />
+<br />
+{the_status}
+<br /><br />
+<input type="submit" name="add_content" value="Add Content" onclick="window.location='?page=administration&content&cpage={cpage_name}&action=add';" /></a> 
+<br /><br />
+<table border="1">
+<tr>
+<td>#</td>
+<td>[lang_date]</td>
+<td>[lang_subject]</td>
+<td>[lang_author]</td>
+<td>[lang_content]</td>
+<td>Action</td>
+</tr>
+{cpage_data_list}
+</table>
+
+{cdata_currentp} / {cdata_totalp}
+
+<br />
+
+{cdata_firstp} {cdata_prevp} {cdata_nextp} {cdata_lastp}
+
+<br /><br />
+<input type="submit" name="back" value="[lang_back]" onclick="window.location='?page=administration&content'" />

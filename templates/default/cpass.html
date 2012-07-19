@@ -1,0 +1,40 @@
+{status}
+<form name="pass_change" action="?page=account&profile&cpass" method="post">
+
+	<table>
+
+		<tr>
+			<td><b>[lang_pass] :</b>
+			</td>
+			<td><input type="password" name="change_password" value="{val_pass}" onfocus="this.value=''" />
+			</td>
+		</tr>
+
+		<tr>
+			<td><b>[lang_npass] :</b>
+			</td>
+			<td><input type="password" name="change_npassword" value="{val_npass}" onfocus="this.value=''" />
+			</td>
+		</tr>
+
+		<tr>
+			<td><b>[lang_rnpass] :</b>
+			</td>
+			<td><input type="password" name="change_rnpassword" value="{val_rnpass}" onfocus="this.value=''" />
+			</td>
+		</tr>
+
+		<tr>
+			<td><input type="submit" name="change_submit"
+				value="[lang_change]" />
+			</td>
+			<td>&nbsp;</td>
+		</tr>
+
+	</table>
+
+</form>
+
+<br />
+
+<input type="submit" name="back" value="[lang_back]" onclick="window.location='?page=account&profile'" />
