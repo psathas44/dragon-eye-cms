@@ -1,0 +1,53 @@
+{the_status}
+<form name="content_data_add" action="?page=administration&content&cpage={cpage_name}" method="post">
+
+	<table>
+
+		<tr>
+			<td><b>Subject :</b>
+			</td>
+			<td><input type="text" name="cdata_title" value="" />
+			</td>
+		</tr>
+
+		<tr>
+		<td rowspan="2">
+		<input type="button" value="Image" name="image" onclick="javascript:d64code_show_attrbs('img', '1', 'src', 'border', 'width', 'height');" />
+		<br />
+		<input type="button" value="Url" name="url" onclick="javascript:d64code_show_attrbs('a', '0', 'src', 'target');" />
+		<br />
+		<input type="button" value="Iframe" name="iframe" onclick="javascript:d64code_show_attrbs('iframe', '0', 'src', 'frameborder', 'width', 'height', 'scrolling');" />
+		</td>
+		<td id="basic" style="display:inline;text-align:center;">
+		<input type="button" value="br" name="br" onclick="javascript:d64code_add('br', '1', this, 'message');" />
+		<input type="button" value="hr" name="hr" onclick="javascript:d64code_add('hr', '1', this, 'message');" />
+		<br />
+		<input type="button" value="bold" name="bold" onclick="javascript:d64code_add('b', '0', this, 'message');" />
+		<input type="button" value="italic" name="italic" onclick="javascript:d64code_add('i', '0', this, 'message');" />
+		<input type="button" value="underline" name="underline" onclick="javascript:d64code_add('u', '0', this, 'message');" />
+		<br />
+		<input type="button" value="strikethrough" name="strikethrough" onclick="javascript:d64code_add('s', '0', this, 'message');" />
+		<input type="button" value="superscript" name="superscript" onclick="javascript:d64code_add('sup', '0', this, 'message');" />
+		<input type="button" value="subscript" name="subscript" onclick="javascript:d64code_add('sub', '0', this, 'message');" />
+		<br />
+		</td>
+		<td id="attrbs" style="display:none;text-align:center;"></td>
+		</tr>
+		<tr>
+		<td>
+		Content:
+		<br />
+		<textarea name="cdata_content" id="message" ></textarea>
+		</td>
+		</tr>
+		
+		<tr>
+			<td><input type="submit" name="cdata_add" value="Add" /></td>
+			<td><input type="reset" name="cdata_add" value="Clean" /></td>
+		</tr>
+
+	</table>
+
+</form>
+<br /><br />
+<input type="submit" name="back" value="[lang_back]" onclick="window.location='?page=administration&content&cpage={cpage_name}'" />

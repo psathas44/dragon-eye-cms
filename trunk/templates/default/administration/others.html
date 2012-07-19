@@ -1,0 +1,49 @@
+<td>
+<div style="margin-top:15px;">
+<div class="corner-bl"><div class="corner-br"><div class="corner-tl"><div class="corner-tr">
+<div id="cdata-text">
+<div class="typeface-js" style="font-family: AntiquaSSK;color:#ffffff;font-size:18px;text-align:center;">
+<div style="display:inline;float:left;margin-left:45px;position:static;">Others</div>
+</div>
+<br />
+<div id="sep-medium"></div>
+<div align="center" style="font-family: Verdana;color:#f4f9ff;font-size:10px;padding-top:15px;">
+<u>Note* This page(others) it's just temporary, we'll rearrange the admin panel pages in next version.</u>
+
+<br /><br />
+
+{the_status}
+<form name="others" action="?page=administration&others" method="post">
+<table border="0" cellspacing="5" cellpadding="5">
+<tr><td>Check Logged Cache</td><td><input type="text" name="logged_cache" value="[config_check_logged]" /> seconds</td></tr>
+<tr><td>Server Status</td><td><select name="server_status">{status_server}</select></td></tr>
+<tr><td>LoginServer IP</td><td><input type="text" name="ls_ip" value="[config_status_login_ip]" /></td></tr>
+<tr><td>LoginServer PORT</td><td><input type="text" name="ls_port" value="[config_status_login_port]" /></td></tr>
+<tr><td>GameServer IP</td><td><input type="text" name="gs_ip" value="[config_status_server_ip]" /></td></tr>
+<tr><td>GameServer PORT</td><td><input type="text" name="gs_port" value="[config_status_server_port]" /></td></tr>
+<tr><td>Server Status Cache</td><td><input type="text" name="status_cache" value="[config_status_cache]" /> seconds</td></tr>
+<tr colspan="2"><td>&nbsp;</td></tr>
+<tr><td>Players Online</td><td><select name="players_online">{status_playerson}</select></td></tr>
+<tr><td>Players Online Cache</td><td><input type="text" name="online_cache" value="[config_online_cache]" /> seconds</td></tr>
+<tr><td>Register Activation Mail</td><td><select name="register_activation">{status_registeract}</select></td></tr>
+<tr><td>Recover Password</td><td><select name="recover_pass">{status_recoverpass}</select></td></tr>
+<tr><td>Change Password</td><td><select name="change_pass">{status_changepass}</select></td></tr>
+<tr><td>Activation Session Expire</td><td><input type="text" name="act_session" value="[config_register_activation_sess_expire]" /> seconds</td></tr>
+<tr><td>Recover Session Expire</td><td><input type="text" name="rec_session" value="[config_recover_sess_expire]" /> seconds</td></tr>
+<tr><td>Refer System</td><td><select name="refer_system">{status_refer}</select></td></tr>
+<tr><td>Page Execution Time</td><td><select name="exec_time">{status_pagetime}</select></td></tr>
+<tr><td>Total Queries</td><td><select name="total_queries">{status_tqueries}</select></td></tr>
+<tr><td>DEBUG MODE</td><td><select name="debug">{status_debug}</select>
+</table>
+<br /><br />
+<br />
+<input type="submit" id="button" name="save" tabindex="9" value="SAVE" />
+</form>
+
+</div>
+</div>
+</div>
+</div></div></div></div>
+
+</td>
+</tr>

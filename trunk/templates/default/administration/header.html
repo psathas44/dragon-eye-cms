@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>{page_title}</title>
+
+<meta http-equiv="Content-type" content="text/html;charset=[page_charset]" />
+<meta name="description" content="{meta_description}" />
+<meta name="keywords" content="{meta_keywords}" />
+<meta name="author" content="{meta_author}" />
+<style>
+body
+{
+	background-color:#17181d;
+    margin: 50px 0px;
+    padding: 0px;
+    text-align: center;
+}
+input[type="text"], input[type="password"]
+{
+	border:2px inset #595758;
+	background-color:#6f6c6c;
+	width:120px;
+}
+textarea
+{
+	border:2px inset #595758;
+	background-color:#6f6c6c;
+	width:320px;
+	height:320px;
+	max-width:400px;
+}
+input[type="submit"], input[type="reset"], input[type="button"]
+{
+	background-image:url('{button.png]');
+	background-repeat:no-repeat;
+	background-color:transparent;
+	width:113px;
+	height:39px;
+	border:none;
+	font-family: AntiquaSSK;color:#ffffff;font-size:18px;text-align:center;
+}
+th
+{
+	text-align:left;
+}
+#char-details-table
+{
+	border:2px solid;
+	width:500px;
+}
+#char-details th
+{
+	border-top:3px solid #dadada;
+	border-left:2px solid #dadada;
+	border-bottom:3px solid #dadada;
+	background-color:#a8a8a8;
+	color:#f8f8f8;
+}
+#char-details td
+{
+	border-top:3px solid #a8a8a8;
+	border-right:2px solid #a8a8a8;
+	border-bottom:3px solid #a8a8a8;
+	background-color:#dadada;
+	color:#494744;
+	text-align:center;
+}
+#char-details a
+{
+	color:#494744;
+}
+#clan-details-table
+{
+	border:2px solid;
+}
+#clan-details th
+{
+	border:1px solid #dadada;
+	background-color:#a8a8a8;
+	color:#f8f8f8;
+}
+#clan-details td
+{
+	border:1px solid #a8a8a8;
+	background-color:#dadada;
+	color:#494744;
+	text-align:center;
+}
+#clan-details a
+{
+	color:#494744;
+}
+#button-field
+{
+	background-image:url('{button_field.png]');
+	background-repeat:no-repeat;
+	width:225px;
+	height:52px;
+	border:none;
+	padding-top:15px;
+	margin-bottom:-15px;
+	font-family: AntiquaSSK;color:#ffffff;font-size:18px;text-align:center;
+	cursor:default;
+}
+#wrapping
+{
+    width: 991px;
+    margin: 0px auto;
+    text-align: left;
+}
+#cdata-text
+{
+	padding:15px;
+}
+#sep-long
+{
+	background-image:url('{sep_long.png]');
+	background-repeat:no-repeat;
+	height:19px;
+	border:none;
+	margin-left:5px;
+	margin-right:5px;
+}
+#sep-medium
+{
+	background-image:url('{sep_medium.png]');
+	background-repeat:no-repeat;
+	background-size:100%;
+	height:22px;
+	border:none;
+	margin-left:5px;
+	margin-right:5px;
+	margin-left:-15px;
+}
+#sep-short
+{
+	background-image:url('{sep_short.png]');
+	background-repeat:no-repeat;
+	background-size:100%;	
+	height:30px;
+	width:284px;
+	border:none;
+	margin-left:-25px;
+}
+#menu
+{
+	background-image:url('{menu_bg.png]');
+	width:910px;
+	height:64px;
+}
+#menu-button
+{
+	background-image:url('{menu_button.png]');
+	background-repeat:no-repeat;
+	width:147px;
+	height:51px;
+	padding-top:15px;
+	margin-top:7px;
+	display:inline;
+	cursor:default;
+}
+#logo-l
+{
+	background-image:url('{logo_l.png]');
+	width:57px;
+	height:22px;
+	position:absolute;
+	top:220px;
+	left:105px;
+}
+#news-bar
+{
+	background:url('{newsbar.png]');
+	position:relative;
+	top:170px;
+	height:11px;
+	width:100.6%;
+	filter:alpha(opacity=80);
+	opacity:0.8;
+	z-index:-1;
+}
+.corner-bl
+{
+	background:url('{corner_bl.png]') 0 100% no-repeat #494744;width:100%;
+}
+.corner-br
+{
+	background:url('{corner_br.png]') 100% 100% no-repeat;
+}
+.corner-tl
+{
+	background:url('{corner_tl.png]') 0 0 no-repeat;height:100%;
+}
+.corner-tr
+{
+	background:url('{corner_tr.png]') 100% 0 no-repeat; padding:10px;height:100%;
+}
+a
+{
+	color:#dadada;
+}
+</style>
+
+<script src="templates/default/typeface-0.15.js"></script>
+<script src="templates/default/visitor_tt1_brk_regular.typeface.js"></script>
+<script src="templates/default/antiquassk_regular.typeface.js"></script>
+<script src="templates/default/apple_garamond_bold_italic.typeface.js"></script>
+<script type="text/javascript" src="templates/default/d64code_v1.js"></script> 
+
+<script type="text/javascript">
+function prev_slide()
+{
+	document.getElementById('slide-image').style.background = "url('{gallery_img2.png]')";
+}
+function next_slide()
+{
+	document.getElementById('slide-image').style.background = "url('{gallery_img.png]')";
+}
+</script>
+
+</head>
+
+<body>
+<div id="wrapping">
+<div id="sep-long"></div>
+
+<div style="margin-top:15px;margin-bottom:15px;width:911px;height:312px;background-image:url('{logo.jpg]');background-repeat:no-repeat;position:relative;">
+<div class="corner-bl" style="height:312px;background-color:transparent;position:relative;"><div style="height:312px;" class="corner-br"><div class="corner-tl"><div class="corner-tr">
+<div id="logo-l">
+<div class="typeface-js" style="font-family: Apple Garamond Bold Italic;font-style:italic;font-weight:bold;white-space:nowrap;display:inline;color:#ffffff;width:100%;font-size:47.62px;margin-top:10px;margin-left:-65px;">
+[config_website_name]
+</div>
+
+</div>
+</div></div></div></div>
+</div>
+
+<div id="menu">
+<div class="typeface-js" style="font-family: AntiquaSSK;color:#ffffff;font-size:18px;text-align:center;">
+<div id="menu-button" onclick="window.location='?page=home';" title="Click to visit Home">Home</div>
+<div id="menu-button" onclick="window.location='?page=downloads';" title="Click to visit Downloads">Downloads</div>
+<div id="menu-button" onclick="window.location='?page=account';" title="Click to visit Account">Account</div>
+<div id="menu-button" onclick="window.location='?page=features';" title="Click to visit Features">Features</div>
+<div id="menu-button" onclick="window.location='?page=staff';" title="Click to visit Staff">Staff</div>
+<div id="menu-button" onclick="window.location='?page=community';" title="Click to visit Community">Community</div>
+</div>
+</div>
+
+<table align="left">
+<tr>
+<td>
+
+<div style="width:284px;margin-top:15px;">
+<div class="corner-bl"><div class="corner-br"><div class="corner-tl"><div class="corner-tr">
+<div id="cdata-text">
+<div class="typeface-js" style="font-family: AntiquaSSK;color:#ffffff;font-size:18px;text-align:center;">
+User Control Panel
+<div id="sep-short"></div>
+Welcome, {username}
+<br /><br />
+
+<a href="?page=administration&underattack"><img border="0" src="{ddos_shield.png]" width="120" height="85" alt="Under ATTACK?" title="Under ATTACK?" /></a>
+<br />
+<div id="button-field" onclick="window.location='?page=administration&content'">Content Management</div>
+<div id="button-field" onclick="window.location='?page=administration&template'">Template Management</div>
+<br />
+<div id="button-field" onclick="window.location='?page=administration&settings'">Server Settings</div>
+<br />
+<div id="button-field" onclick="window.location='?page=administration&donate'">Donate System</div>
+<div id="button-field" onclick="window.location='?page=administration&vote'">Vote System</div>
+<div id="button-field" onclick="window.location='?page=administration&shop'">Shop System</div>
+<div id="button-field" onclick="window.location='?page=administration&stats'">Stats System</div>
+<div id="button-field" onclick="window.location='?page=administration&flood'">Flood System</div>
+<br />
+<div id="button-field" onclick="window.location='?page=administration&others'">Others</div>
+<br />
+<div id="button-field" onclick="window.location='?page=administration&logs'">Logs</div>
+<br />
+<br />
+<input type="submit" name="logout" value="[lang_logout]" onclick="window.location='?page=account&logout'" />
+<br />
+</div>
+</div>
+</div>
+</div></div></div></div>
+
+</td>
+</tr>
+</table>
+<table style="position:static;width:620px;">

@@ -1,0 +1,837 @@
+	<span>Extra Settings.</span>
+	
+	<br />
+	
+{step_errors}
+
+	<p><u>Server type it's autodetected, depending on database configurations</u></p>
+
+<form name="next_step" action="index.php" method="post">
+
+<fieldset>
+<legend>Main Settings</legend>
+<table border="0" cellspacing="1" cellpadding="3">
+<tr><td>WebSite Name</td><td>WebSite URL</td></tr>
+<tr><td><input type="text" id="field" name="website_name" tabindex="1" value="{val_webname}" /></td><td><input type="text" id="field" name="website_url" tabindex="2" value="{val_weburl}" /></td><td>Without "/"</td></tr>
+</table>
+</fieldset>
+<fieldset>
+<legend>META Settings</legend>
+<table border="0" cellspacing="1" cellpadding="3">
+<tr><td>Description</td><td>Keywords</td><td>Author</td></tr>
+<tr><td><input type="text" id="field" name="meta_desc" tabindex="3" value="{val_description}" /></td><td><input type="text" id="field" name="meta_keywords" tabindex="4" value="{val_keywords}" /></td><td><input type="text" id="field" name="meta_author" tabindex="5" value="{val_author}" /></td></tr>
+</table>
+</fieldset>
+<fieldset>
+<legend>Mail Settings</legend>
+<p><input type="radio" name="smtp_data" value="0" onclick="change_display('smtp', 'none', '0')" {smtp_check_d}/>Disabled<input type="radio" name="smtp_data" value="2" onclick="change_display('smtp', 'none', '0');" {smtp_check_p}/>PHP Default<input type="radio" name="smtp_data" value="1" onclick="change_display('smtp', 'table', '0');" {smtp_check_s}/>SMTP</p>
+<table border="0" cellspacing="1" cellpading="3">
+<tr><td>Admin Email</td></tr>
+<tr><td><input type="text" id="field" name="admin_mail" tabindex="6" value="{val_admin_mail}" /></td></tr>
+</table>
+<table id="smtp" style="display:{smtp_display};" border="0" cellspacing="1" cellpadding="3">
+<tr><td>Server</td><td>Port</td></tr>
+<tr><td><input type="text" id="field" name="smtp_server" tabindex="7" value="{val_smtp_server}" /></td><td><input type="text" id="field" name="smtp_port" tabindex="8" value="{val_smtp_port}" /></td></tr>
+<tr><td>Username</td><td>Password</td></tr>
+<tr><td><input type="text" id="field" name="smtp_user" tabindex="9" value="{val_smtp_user}" /></td><td><input type="password" id="field" name="smtp_pass" tabindex="10" value="" /></td></tr>
+</table>
+</fieldset>
+<fieldset>
+<legend>Database Structure</legend>
+<p>
+{db_load_structure}
+</p>
+<table id="structure_1_userc" style="display:none;" border="0" cellspacing="1" cellpadding="3">
+<tr><td>Table Name</td></tr>
+<tr><td><input type="text" id="field" name="l2off_userc_table" tabindex="11" value="[dbstruct_l2off_userc_table]" onblur="check_column(this.value, this.name, 0, 2);change_display('l2off_userc_table_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_userc_table_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+<tr><td>Record Time</td><td>&nbsp;</td><td>World User</td><td>&nbsp;</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2off_userc_rtime" tabindex="12" value="[dbstruct_l2off_userc_rtime]" onblur="check_column(this.value, this.name, l2off_userc_table.value, 2);change_display('l2off_userc_rtime_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_userc_rtime_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_userc_worldu" tabindex="13" value="[dbstruct_l2off_userc_woldu]" onblur="check_column(this.value, this.name, l2off_userc_table.value, 2);change_display('l2off_userc_worldu_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_userc_worldu_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+</tr>
+</table>
+<table id="structure_1_ssn" style="display:none;" border="0" cellspacing="1" cellpadding="3">
+<tr><td>Table Name</td></tr>
+<tr><td><input type="text" id="field" name="l2off_ssn_table" tabindex="11" value="[dbstruct_l2off_ssn_table]" onblur="check_column(this.value, this.name, 0, 2);change_display('l2off_ssn_table_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_ssn_table_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+<tr><td>Name</td><td>&nbsp;</td><td>Email</td><td>&nbsp;</td><td>Job</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2off_ssn_name" tabindex="12" value="[dbstruct_l2off_ssn_name]" onblur="check_column(this.value, this.name, l2off_ssn_table.value, 2);change_display('l2off_ssn_name_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_ssn_name_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_ssn_mail" tabindex="13" value="[dbstruct_l2off_ssn_email]" onblur="check_column(this.value, this.name, l2off_ssn_table.value, 2);change_display('l2off_ssn_mail_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_ssn_mail_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_ssn_job" tabindex="14" value="[dbstruct_l2off_ssn_job]" onblur="check_column(this.value, this.name, l2off_ssn_table.value, 2);change_display('l2off_ssn_job_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_ssn_job_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+<tr><td>Phone</td><td>&nbsp;</td><td>Zip</td><td>&nbsp;</td><td>Address</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2off_ssn_phone" tabindex="12" value="[dbstruct_l2off_ssn_phone]" onblur="check_column(this.value, this.name, l2off_ssn_table.value, 2);change_display('l2off_ssn_phone_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_ssn_phone_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_ssn_zip" tabindex="13" value="[dbstruct_l2off_ssn_zip]" onblur="check_column(this.value, this.name, l2off_ssn_table.value, 2);change_display('l2off_ssn_zip_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_ssn_zip_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_ssn_address" tabindex="14" value="[dbstruct_l2off_ssn_mad]" onblur="check_column(this.value, this.name, l2off_ssn_table.value, 2);change_display('l2off_ssn_address_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_ssn_address_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+<tr><td>Address 2</td><td>&nbsp;</td><td>Account Num</td><td>&nbsp;</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2off_ssn_addetc" tabindex="12" value="[dbstruct_l2off_ssn_ead]" onblur="check_column(this.value, this.name, l2off_ssn_table.value, 2);change_display('l2off_ssn_addetc_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_ssn_addetc_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_ssn_accnum" tabindex="13" value="[dbstruct_l2off_ssn_acn]" onblur="check_column(this.value, this.name, l2off_ssn_table.value, 2);change_display('l2off_ssn_accnum_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_ssn_accnum_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+</table>
+<table id="structure_1_userac" style="display:none;" border="0" cellspacing="1" cellpadding="3">
+<tr><td>Table Name</td></tr>
+<tr><td><input type="text" id="field" name="l2off_userac_table" tabindex="11" value="[dbstruct_l2off_useracc_table]" onblur="check_column(this.value, this.name, 0, 2);change_display('l2off_userac_table_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_userac_table_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+<tr><td>Account</td><td>&nbsp;</td><td>Pay Stat</td><td>&nbsp;</td><td>Last Logged</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2off_userac_acc" tabindex="12" value="[dbstruct_l2off_useracc_account]" onblur="check_column(this.value, this.name, l2off_userac_table.value, 2);change_display('l2off_userac_acc_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_userac_acc_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_userac_paystat" tabindex="13" value="[dbstruct_l2off_useracc_paystat]" onblur="check_column(this.value, this.name, l2off_userac_table.value, 2);change_display('l2off_userac_paystat_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_userac_paystat_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_userac_llogged" tabindex="14" value="[dbstruct_l2off_useracc_last_logged]" onblur="check_column(this.value, this.name, l2off_userac_table.value, 2);change_display('l2off_userac_llogged_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_userac_llogged_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+</table>
+<table id="structure_1_userau" style="display:none;" border="0" cellspacing="1" cellpadding="3">
+<tr><td>Table Name</td></tr>
+<tr><td><input type="text" id="field" name="l2off_useraut_table" tabindex="11" value="[dbstruct_l2off_useraut_table]" onblur="check_column(this.value, this.name, 0, 2);change_display('l2off_useraut_table_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_useraut_table_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+<tr><td>Account</td><td>&nbsp;</td><td>Pass</td><td>&nbsp;</td><td>Question 1</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2off_useraut_acc" tabindex="12" value="[dbstruct_l2off_useraut_account]" onblur="check_column(this.value, this.name, l2off_useraut_table.value, 2);change_display('l2off_useraut_acc_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_useraut_acc_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_useraut_pass" tabindex="13" value="[dbstruct_l2off_useraut_pass]" onblur="check_column(this.value, this.name, l2off_useraut_table.value, 2);change_display('l2off_useraut_pass_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_useraut_pass_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_useraut_quiz1" tabindex="14" value="[dbstruct_l2off_useraut_quiz1]" onblur="check_column(this.value, this.name, l2off_useraut_table.value, 2);change_display('l2off_useraut_quiz1_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_useraut_quiz1_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+<tr><td>Quiz 2</td><td>&nbsp;</td><td>Answer 1</td><td>&nbsp;</td><td>Answer 2</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2off_useraut_quiz2" tabindex="12" value="[dbstruct_l2off_useraut_quiz2]" onblur="check_column(this.value, this.name, l2off_useraut_table.value, 2);change_display('l2off_useraut_quiz2_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_useraut_quiz2_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_useraut_answ1" tabindex="13" value="[dbstruct_l2off_useraut_answ1]" onblur="check_column(this.value, this.name, l2off_useraut_table.value, 2);change_display('l2off_useraut_answ1_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_useraut_answ1_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_useraut_answ2" tabindex="14" value="[dbstruct_l2off_useraut_answ2]" onblur="check_column(this.value, this.name, l2off_useraut_table.value, 2);change_display('l2off_useraut_answ2_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_useraut_answ2_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+</table>
+<table id="structure_1_useri" style="display:none;" border="0" cellspacing="1" cellpadding="3">
+<tr><td>Table Name</td></tr>
+<tr><td><input type="text" id="field" name="l2off_useri_table" tabindex="11" value="[dbstruct_l2off_userinf_table]" onblur="check_column(this.value, this.name, 0, 2);change_display('l2off_useri_table_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_useri_table_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+<tr><td>Account</td><td>&nbsp;</td><td>SSN</td><td>&nbsp;</td><td>Kind</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2off_useri_acc" tabindex="12" value="[dbstruct_l2off_userinf_account]" onblur="check_column(this.value, this.name, l2off_useri_table.value, 2);change_display('l2off_useri_acc_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_useri_acc_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_useri_ssn" tabindex="13" value="[dbstruct_l2off_userinf_ssn]" onblur="check_column(this.value, this.name, l2off_useri_table.value, 2);change_display('l2off_useri_ssn_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_useri_ssn_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_useri_kind" tabindex="14" value="[dbstruct_l2off_userinf_kind]" onblur="check_column(this.value, this.name, l2off_useri_table.value, 2);change_display('l2off_useri_kind_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_useri_kind_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+</table>
+<table id="structure_1_builder" style="display:none;" border="0" cellspacing="1" cellpadding="3">
+<tr><td>Table Name</td></tr>
+<tr><td><input type="text" id="field" name="l2off_builder_table" tabindex="11" value="[dbstruct_l2off_builder_table]" onblur="check_column(this.value, this.name, 0, 1);change_display('l2off_builder_table_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_builder_table_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+<tr><td>Account</td><td>&nbsp;</td><td>Value</td><td>&nbsp;</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2off_builder_acc" tabindex="12" value="[dbstruct_l2off_builder_account]" onblur="check_column(this.value, this.name, l2off_builder_table.value, 1);change_display('l2off_builder_acc_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_builder_acc_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_builder_val" tabindex="13" value="[dbstruct_l2off_builder_value]" onblur="check_column(this.value, this.name, l2off_builder_table.value, 1);change_display('l2off_builder_val_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_builder_val_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+</table>
+<table id="structure_1_userdat" style="display:none;" border="0" cellspacing="1" cellpadding="3">
+<tr><td>Table Name</td></tr>
+<tr><td><input type="text" id="field" name="l2off_userdat_table" tabindex="11" value="[dbstruct_l2off_userdat_table]" onblur="check_column(this.value, this.name, 0, 1);change_display('l2off_userdat_table_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_userdat_table_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+<tr><td>ID</td><td>&nbsp;</td><td>Char Name</td><td>&nbsp;</td><td>Acc Name</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2off_userdat_id" tabindex="12" value="[dbstruct_l2off_userdat_id]" onblur="check_column(this.value, this.name, l2off_userdat_table.value, 1);change_display('l2off_userdat_id_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_userdat_id_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_userdat_cname" tabindex="13" value="[dbstruct_l2off_userdat_name]" onblur="check_column(this.value, this.name, l2off_userdat_table.value, 1);change_display('l2off_userdat_cname_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_userdat_cname_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_userdat_accname" tabindex="14" value="[dbstruct_l2off_userdat_acc]" onblur="check_column(this.value, this.name, l2off_userdat_table.value, 1);change_display('l2off_userdat_accname_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_userdat_accname_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+<tr><td>Level</td><td>&nbsp;</td><td>PVP</td><td>&nbsp;</td><td>PK</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2off_userdat_level" tabindex="12" value="[dbstruct_l2off_userdat_level]" onblur="check_column(this.value, this.name, l2off_userdat_table.value, 1);change_display('l2off_userdat_level_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_userdat_level_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_userdat_pvp" tabindex="13" value="[dbstruct_l2off_userdat_pvp]" onblur="check_column(this.value, this.name, l2off_userdat_table.value, 1);change_display('l2off_userdat_pvp_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_userdat_pvp_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_userdat_pk" tabindex="14" value="[dbstruct_l2off_userdat_pk]" onblur="check_column(this.value, this.name, l2off_userdat_table.value, 1);change_display('l2off_userdat_pk_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_userdat_pk_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+<tr><td>Underware</td><td>&nbsp;</td><td>R.Earring</td><td>&nbsp;</td><td>L.Earring</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2off_userdat_st_underw" tabindex="12" value="[dbstruct_l2off_userdat_st_underw]" onblur="check_column(this.value, this.name, l2off_userdat_table.value, 1);change_display('l2off_userdat_st_underw_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_userdat_st_underw_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_userdat_st_earr1" tabindex="13" value="[dbstruct_l2off_userdat_st_earr1]" onblur="check_column(this.value, this.name, l2off_userdat_table.value, 1);change_display('l2off_userdat_st_earr1_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_userdat_st_earr1_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_userdat_st_earr2" tabindex="14" value="[dbstruct_l2off_userdat_st_earr2]" onblur="check_column(this.value, this.name, l2off_userdat_table.value, 1);change_display('l2off_userdat_st_earr2_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_userdat_st_earr2_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+<tr><td>Necklace</td><td>&nbsp;</td><td>R.Ring</td><td>&nbsp;</td><td>L.Ring</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2off_userdat_st_neck" tabindex="12" value="[dbstruct_l2off_userdat_st_neck]" onblur="check_column(this.value, this.name, l2off_userdat_table.value, 1);change_display('l2off_userdat_st_neck_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_userdat_st_neck_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_userdat_st_ring1" tabindex="13" value="[dbstruct_l2off_userdat_st_ring1]" onblur="check_column(this.value, this.name, l2off_userdat_table.value, 1);change_display('l2off_userdat_st_ring1_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_userdat_st_ring1_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_userdat_st_ring2" tabindex="14" value="[dbstruct_l2off_userdat_st_ring2]" onblur="check_column(this.value, this.name, l2off_userdat_table.value, 1);change_display('l2off_userdat_st_ring2_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_userdat_st_ring2_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+<tr><td>Helment</td><td>&nbsp;</td><td>R.Hand</td><td>&nbsp;</td><td>L.Hand</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2off_userdat_st_head" tabindex="12" value="[dbstruct_l2off_userdat_st_head]" onblur="check_column(this.value, this.name, l2off_userdat_table.value, 1);change_display('l2off_userdat_st_head_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_userdat_st_head_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_userdat_st_rhand" tabindex="13" value="[dbstruct_l2off_userdat_st_rhand]" onblur="check_column(this.value, this.name, l2off_userdat_table.value, 1);change_display('l2off_userdat_st_rhand_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_userdat_st_rhand_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_userdat_st_lhand" tabindex="14" value="[dbstruct_l2off_userdat_st_lhand]" onblur="check_column(this.value, this.name, l2off_userdat_table.value, 1);change_display('l2off_userdat_st_lhand_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_userdat_st_lhand_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+<tr><td>Gloves</td><td>&nbsp;</td><td>Chest</td><td>&nbsp;</td><td>Legs</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2off_userdat_st_gloves" tabindex="12" value="[dbstruct_l2off_userdat_st_gloves]" onblur="check_column(this.value, this.name, l2off_userdat_table.value, 1);change_display('l2off_userdat_st_gloves_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_userdat_st_gloves_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_userdat_st_chest" tabindex="13" value="[dbstruct_l2off_userdat_st_chest]" onblur="check_column(this.value, this.name, l2off_userdat_table.value, 1);change_display('l2off_userdat_st_chest_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_userdat_st_chest_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_userdat_st_legs" tabindex="14" value="[dbstruct_l2off_userdat_st_legs]" onblur="check_column(this.value, this.name, l2off_userdat_table.value, 1);change_display('l2off_userdat_st_legs_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_userdat_st_legs_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+<tr><td>Feet</td><td>&nbsp;</td><td>Back</td><td>&nbsp;</td><td>B.Hand</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2off_userdat_st_feet" tabindex="12" value="[dbstruct_l2off_userdat_st_feet]" onblur="check_column(this.value, this.name, l2off_userdat_table.value, 1);change_display('l2off_userdat_st_feet_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_userdat_st_feet_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_userdat_st_back" tabindex="13" value="[dbstruct_l2off_userdat_st_back]" onblur="check_column(this.value, this.name, l2off_userdat_table.value, 1);change_display('l2off_userdat_st_back_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_userdat_st_back_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_userdat_st_bhand" tabindex="14" value="[dbstruct_l2off_userdat_st_bhand]" onblur="check_column(this.value, this.name, l2off_userdat_table.value, 1);change_display('l2off_userdat_st_bhand_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_userdat_st_bhand_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+<tr><td>Hair</td><td>&nbsp;</td><td>Deco Hair</td><td>&nbsp;</td><td>All Hair</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2off_userdat_st_hair" tabindex="12" value="[dbstruct_l2off_userdat_st_hair]" onblur="check_column(this.value, this.name, l2off_userdat_table.value, 1);change_display('l2off_userdat_st_hair_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_userdat_st_hair_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_userdat_st_hdeco" tabindex="13" value="[dbstruct_l2off_userdat_st_hdeco]" onblur="check_column(this.value, this.name, l2off_userdat_table.value, 1);change_display('l2off_userdat_st_hdeco_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_userdat_st_hdeco_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_userdat_st_hall" tabindex="14" value="[dbstruct_l2off_userdat_st_hall]" onblur="check_column(this.value, this.name, l2off_userdat_table.value, 1);change_display('l2off_userdat_st_hall_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_userdat_st_hall_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+<tr><td>Clan</td><td>&nbsp;</td><td>Class</td><td>&nbsp;</td><td>Title</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2off_userdat_clan" tabindex="12" value="[dbstruct_l2off_userdat_clan]" onblur="check_column(this.value, this.name, l2off_userdat_table.value, 1);change_display('l2off_userdat_clan_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_userdat_clan_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_userdat_class" tabindex="13" value="[dbstruct_l2off_userdat_class]" onblur="check_column(this.value, this.name, l2off_userdat_table.value, 1);change_display('l2off_userdat_class_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_userdat_class_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_userdat_title" tabindex="14" value="[dbstruct_l2off_userdat_title]" onblur="check_column(this.value, this.name, l2off_userdat_table.value, 1);change_display('l2off_userdat_title_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_userdat_title_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+<tr><td>Online Time</td><td>&nbsp;</td><td>Last Access</td><td>&nbsp;</td><td>Subjob</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2off_userdat_ontime" tabindex="12" value="[dbstruct_l2off_userdat_online_time]" onblur="check_column(this.value, this.name, l2off_userdat_table.value, 1);change_display('l2off_userdat_ontime_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_userdat_ontime_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_userdat_laccess" tabindex="13" value="[dbstruct_l2off_userdat_last_access]" onblur="check_column(this.value, this.name, l2off_userdat_table.value, 1);change_display('l2off_userdat_laccess_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_userdat_laccess_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_userdat_subjob" tabindex="14" value="[dbstruct_l2off_userdat_subjob]" onblur="check_column(this.value, this.name, l2off_userdat_table.value, 1);change_display('l2off_userdat_subjob_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_userdat_subjob_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+</table>
+<table id="structure_1_pledge" style="display:none;" border="0" cellspacing="1" cellpadding="3">
+<tr><td>Table Name</td></tr>
+<tr><td><input type="text" id="field" name="l2off_pledge_table" tabindex="11" value="[dbstruct_l2off_pledge_table]" onblur="check_column(this.value, this.name, 0, 1);change_display('l2off_pledge_table_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_pledge_table_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+<tr><td>ID</td><td>&nbsp;</td><td>Name</td><td>&nbsp;</td><td>Level</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2off_pledge_id" tabindex="12" value="[dbstruct_l2off_pledge_id]" onblur="check_column(this.value, this.name, l2off_pledge_table.value, 1);change_display('l2off_pledge_id_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_pledge_id_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_pledge_name" tabindex="13" value="[dbstruct_l2off_pledge_name]" onblur="check_column(this.value, this.name, l2off_pledge_table.value, 1);change_display('l2off_pledge_name_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_pledge_name_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_pledge_level" tabindex="14" value="[dbstruct_l2off_pledge_level]" onblur="check_column(this.value, this.name, l2off_pledge_table.value, 1);change_display('l2off_pledge_level_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_pledge_level_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+<tr><td>Castle</td><td>&nbsp;</td><td>Ally</td><td>&nbsp;</td><td>Leader</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2off_pledge_castle" tabindex="12" value="[dbstruct_l2off_pledge_castle]" onblur="check_column(this.value, this.name, l2off_pledge_table.value, 1);change_display('l2off_pledge_castle_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_pledge_castle_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_pledge_ally" tabindex="13" value="[dbstruct_l2off_pledge_ally]" onblur="check_column(this.value, this.name, l2off_pledge_table.value, 1);change_display('l2off_pledge_ally_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_pledge_ally_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_pledge_leader" tabindex="14" value="[dbstruct_l2off_pledge_leader]" onblur="check_column(this.value, this.name, l2off_pledge_table.value, 1);change_display('l2off_pledge_leader_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_pledge_leader_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+</table>
+<table id="structure_1_castle" style="display:none;" border="0" cellspacing="1" cellpadding="3">
+<tr><td>Table Name</td></tr>
+<tr><td><input type="text" id="field" name="l2off_castle_table" tabindex="11" value="[dbstruct_l2off_castle_table]" onblur="check_column(this.value, this.name, 0, 1);change_display('l2off_castle_table_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_castle_table_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+<tr><td>ID</td><td>&nbsp;</td><td>Name</td><td>&nbsp;</td><td>Date</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2off_castle_id" tabindex="12" value="[dbstruct_l2off_castle_id]" onblur="check_column(this.value, this.name, l2off_castle_table.value, 1);change_display('l2off_castle_id_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_castle_id_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_castle_name" tabindex="13" value="[dbstruct_l2off_castle_name]" onblur="check_column(this.value, this.name, l2off_castle_table.value, 1);change_display('l2off_castle_name_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_castle_name_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_castle_date" tabindex="14" value="[dbstruct_l2off_castle_date]" onblur="check_column(this.value, this.name, l2off_castle_table.value, 1);change_display('l2off_castle_date_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_castle_date_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+</table>
+<table id="structure_1_npcboss" style="display:none;" border="0" cellspacing="1" cellpadding="3">
+<tr><td>Table Name</td></tr>
+<tr><td><input type="text" id="field" name="l2off_npcboss_table" tabindex="11" value="[dbstruct_l2off_npcbos_table]" onblur="check_column(this.value, this.name, 0, 1);change_display('l2off_npcboss_table_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_npcboss_table_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+<tr><td>Name</td><td>&nbsp;</td><td>Time Low</td><td>&nbsp;</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2off_npcboss_name" tabindex="12" value="[dbstruct_l2off_npcbos_name]" onblur="check_column(this.value, this.name, l2off_npcboss_table.value, 1);change_display('l2off_npcboss_name_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_npcboss_name_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_npcboss_tlow" tabindex="13" value="[dbstruct_l2off_npcbos_tlow]" onblur="check_column(this.value, this.name, l2off_npcboss_table.value, 1);change_display('l2off_npcboss_tlow_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_npcboss_tlow_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+</table>
+<table id="structure_1_ally" style="display:none;" border="0" cellspacing="1" cellpadding="3">
+<tr><td>Table Name</td></tr>
+<tr><td><input type="text" id="field" name="l2off_ally_table" tabindex="11" value="[dbstruct_l2off_alliance_table]" onblur="check_column(this.value, this.name, 0, 1);change_display('l2off_ally_table_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_ally_table_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+<tr><td>ID</td><td>&nbsp;</td><td>Name</td><td>&nbsp;</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2off_ally_id" tabindex="12" value="[dbstruct_l2off_alliance_id]" onblur="check_column(this.value, this.name, l2off_ally_table.value, 1);change_display('l2off_ally_id_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_ally_id_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_ally_name" tabindex="13" value="[dbstruct_l2off_alliance_name]" onblur="check_column(this.value, this.name, l2off_ally_table.value, 1);change_display('l2off_ally_name_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_ally_name_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+</table>
+<table id="structure_1_usernob" style="display:none;" border="0" cellspacing="1" cellpadding="3">
+<tr><td>Table Name</td></tr>
+<tr><td><input type="text" id="field" name="l2off_usernob_table" tabindex="11" value="[dbstruct_l2off_unobles_table]" onblur="check_column(this.value, this.name, 0, 1);change_display('l2off_usernob_table_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_usernob_table_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+<tr><td>ID</td><td>&nbsp;</td><td>Noblesse</td><td>&nbsp;</td><td>Hero</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2off_usernob_id" tabindex="12" value="[dbstruct_l2off_unobles_id]" onblur="check_column(this.value, this.name, l2off_usernob_table.value, 1);change_display('l2off_usernob_id_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_usernob_id_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_usernob_noble" tabindex="13" value="[dbstruct_l2off_unobles_noble]" onblur="check_column(this.value, this.name, l2off_usernob_table.value, 1);change_display('l2off_usernob_noble_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_usernob_noble_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_usernob_hero" tabindex="14" value="[dbstruct_l2off_unobles_hero]" onblur="check_column(this.value, this.name, l2off_usernob_table.value, 1);change_display('l2off_usernob_hero_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_usernob_hero_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+</table>
+<table id="structure_1_social" style="display:none;" border="0" cellspacing="1" cellpadding="3">
+<tr><td>Table Name</td></tr>
+<tr><td><input type="text" id="field" name="l2off_social_table" tabindex="11" value="[dbstruct_l2off_usocial_table]" onblur="check_column(this.value, this.name, 0, 1);change_display('l2off_social_table_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_social_table_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+<tr><td>ID</td><td>&nbsp;</td><td>Name</td><td>&nbsp;</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2off_social_id" tabindex="12" value="[dbstruct_l2off_usocial_id]" onblur="check_column(this.value, this.name, l2off_social_table.value, 1);change_display('l2off_social_id_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_social_id_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_social_name" tabindex="13" value="[dbstruct_l2off_usocial_name]" onblur="check_column(this.value, this.name, l2off_social_table.value, 1);change_display('l2off_social_name_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_social_name_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+</table>
+<table id="structure_1_skills" style="display:none;" border="0" cellspacing="1" cellpadding="3">
+<tr><td>Table Name</td></tr>
+<tr><td><input type="text" id="field" name="l2off_skills_table" tabindex="11" value="[dbstruct_l2off_skills_table]" onblur="check_column(this.value, this.name, 0, 1);change_display('l2off_skills_table_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_skills_table_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+<tr><td>Char ID</td><td>&nbsp;</td><td>ID</td><td>&nbsp;</td><td>Level</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2off_skills_cid" tabindex="12" value="[dbstruct_l2off_skills_cid]" onblur="check_column(this.value, this.name, l2off_skills_table.value, 1);change_display('l2off_skills_cid_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_skills_cid_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_skills_id" tabindex="13" value="[dbstruct_l2off_skills_id]" onblur="check_column(this.value, this.name, l2off_skills_table.value, 1);change_display('l2off_skills_id_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_skills_id_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_skills_level" tabindex="13" value="[dbstruct_l2off_skills_level]" onblur="check_column(this.value, this.name, l2off_skills_table.value, 1);change_display('l2off_skills_level_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_skills_level_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+<tr><td>Subjob</td><td>&nbsp;</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2off_skills_subjob" tabindex="12" value="[dbstruct_l2off_skills_subjob]" onblur="check_column(this.value, this.name, l2off_skills_table.value, 1);change_display('l2off_skills_subjob_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_skills_subjob_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+</table>
+<table id="structure_1_items" style="display:none;" border="0" cellspacing="1" cellpadding="3">
+<tr><td>Table Name</td></tr>
+<tr><td><input type="text" id="field" name="l2off_items_table" tabindex="11" value="[dbstruct_l2off_items_table]" onblur="check_column(this.value, this.name, 0, 1);change_display('l2off_items_table_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_items_table_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+<tr><td>Char ID</td><td>&nbsp;</td><td>ID</td><td>&nbsp;</td><td>Count</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2off_items_cid" tabindex="12" value="[dbstruct_l2off_items_cid]" onblur="check_column(this.value, this.name, l2off_items_table.value, 1);change_display('l2off_items_cid_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_items_cid_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_items_id" tabindex="13" value="[dbstruct_l2off_items_id]" onblur="check_column(this.value, this.name, l2off_items_table.value, 1);change_display('l2off_items_id_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_items_id_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_items_count" tabindex="13" value="[dbstruct_l2off_items_count]" onblur="check_column(this.value, this.name, l2off_items_table.value, 1);change_display('l2off_items_count_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_items_count_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+<tr><td>Enchant</td><td>&nbsp;</td><td>Warehouse</td><td>&nbsp;</td><td>Type</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2off_items_enchant" tabindex="12" value="[dbstruct_l2off_items_enchant]" onblur="check_column(this.value, this.name, l2off_items_table.value, 1);change_display('l2off_items_enchant_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_items_enchant_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_items_warehouse" tabindex="13" value="[dbstruct_l2off_items_warehouse]" onblur="check_column(this.value, this.name, l2off_items_table.value, 1);change_display('l2off_items_warehouse_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_items_warehouse_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2off_items_type" tabindex="13" value="[dbstruct_l2off_items_type]" onblur="check_column(this.value, this.name, l2off_items_table.value, 1);change_display('l2off_items_type_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2off_items_type_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+</table>
+<table id="structure_2_acc" style="display:none;" border="0" cellspacing="1" cellpadding="3">
+<tr><td>Table Name</td></tr>
+<tr><td><input type="text" id="field" name="l2j_accounts_table" tabindex="11" value="[dbstruct_l2j_accounts_table]" onblur="check_column(this.value, this.name, 0, 2);change_display('l2j_accounts_table_check', 'inline');" /></td><td><img style="display:none;" height="15" width="15" id="l2j_accounts_table_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" /></td></tr>
+<tr><td>Login</td><td>&nbsp;</td><td>Password</td><td>&nbsp;</td><td>Access Level</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2j_accounts_login" tabindex="12" value="[dbstruct_l2j_accounts_name]" onblur="check_column(this.value, this.name, l2j_accounts_table.value, 2);change_display('l2j_accounts_login_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_accounts_login_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2j_accounts_pass" tabindex="13" value="[dbstruct_l2j_accounts_pass]" onblur="check_column(this.value, this.name, l2j_accounts_table.value, 2);change_display('l2j_accounts_pass_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_accounts_pass_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2j_accounts_acc_lvl" tabindex="14" value="[dbstruct_l2j_accounts_acc_lvl]" onblur="check_column(this.value, this.name, l2j_accounts_table.value, 2);change_display('l2j_accounts_acc_lvl_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_accounts_acc_lvl_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+<tr><td>Last Logged</td><td>&nbsp;</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2j_accounts_last_logged" tabindex="12" value="[dbstruct_l2j_accounts_last_logged]" onblur="check_column(this.value, this.name, l2j_accounts_table.value, 2);change_display('l2j_accounts_last_logged_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_accounts_last_logged_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+</table>
+<table id="structure_2_chars" style="display:none;" border="0" cellspacing="1" cellpadding="3">
+<tr><td>Table Name</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2j_chars_table" tabindex="11" value="[dbstruct_l2j_chars_table]" onblur="check_column(this.value, this.name, 0, 1);change_display('l2j_chars_table_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_chars_table_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+<tr><td>Account Name</td><td>&nbsp;</td><td>ID</td><td>&nbsp;</td><td>Char Name</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2j_chars_login" tabindex="12" value="[dbstruct_l2j_chars_acc]" onblur="check_column(this.value, this.name, l2j_chars_table.value, 1);change_display('l2j_chars_login_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_chars_login_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2j_chars_id" tabindex="13" value="[dbstruct_l2j_chars_id]" onblur="check_column(this.value, this.name, l2j_chars_table.value, 1);change_display('l2j_chars_id_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_chars_id_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2j_chars_name" tabindex="14" value="[dbstruct_l2j_chars_name]" onblur="check_column(this.value, this.name, l2j_chars_table.value, 1);change_display('l2j_chars_name_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_chars_name_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+<tr><td>Level</td><td>&nbsp;</td><td>PVP</td><td>&nbsp;</td><td>PK</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2j_chars_level" tabindex="12" value="[dbstruct_l2j_chars_level]" onblur="check_column(this.value, this.name, l2j_chars_table.value, 1);change_display('l2j_chars_level_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_chars_level_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2j_chars_pvp" tabindex="13" value="[dbstruct_l2j_chars_pvp]" onblur="check_column(this.value, this.name, l2j_chars_table.value, 1);change_display('l2j_chars_pvp_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_chars_pvp_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2j_chars_pk" tabindex="14" value="[dbstruct_l2j_chars_pk]" onblur="check_column(this.value, this.name, l2j_chars_table.value, 1);change_display('l2j_chars_pk_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_chars_pk_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+<tr><td>Clan ID</td><td>&nbsp;</td><td>Class ID</td><td>&nbsp;</td><td>Title</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2j_chars_clanid" tabindex="12" value="[dbstruct_l2j_chars_clan]" onblur="check_column(this.value, this.name, l2j_chars_table.value, 1);change_display('l2j_chars_clanid_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_chars_clanid_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2j_chars_classid" tabindex="13" value="[dbstruct_l2j_chars_class]" onblur="check_column(this.value, this.name, l2j_chars_table.value, 1);change_display('l2j_chars_classid_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_chars_classid_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2j_chars_title" tabindex="14" value="[dbstruct_l2j_chars_title]" onblur="check_column(this.value, this.name, l2j_chars_table.value, 1);change_display('l2j_chars_title_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_chars_title_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+<tr><td>Recs</td><td>&nbsp;</td><td>Online</td><td>&nbsp;</td><td>Online Time</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2j_chars_recs" tabindex="12" value="[dbstruct_l2j_chars_recs]" onblur="check_column(this.value, this.name, l2j_chars_table.value, 1);change_display('l2j_chars_recs_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_chars_recs_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2j_chars_online" tabindex="13" value="[dbstruct_l2j_chars_online]" onblur="check_column(this.value, this.name, l2j_chars_table.value, 1);change_display('l2j_chars_online_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_chars_online_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2j_chars_ontime" tabindex="14" value="[dbstruct_l2j_chars_online_time]" onblur="check_column(this.value, this.name, l2j_chars_table.value, 1);change_display('l2j_chars_ontime_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_chars_ontime_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+<tr><td>Last Access</td><td>&nbsp;</td><td>Noblesse</td><td>&nbsp;</td><td>Hero</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2j_chars_laccess" tabindex="12" value="[dbstruct_l2j_chars_last_access]" onblur="check_column(this.value, this.name, l2j_chars_table.value, 1);change_display('l2j_chars_laccess_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_chars_laccess_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2j_chars_noble" tabindex="13" value="[dbstruct_l2j_chars_noble]" onblur="check_column(this.value, this.name, l2j_chars_table.value, 1);change_display('l2j_chars_noble_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_chars_noble_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2j_chars_hero" tabindex="14" value="[dbstruct_l2j_chars_hero]" onblur="check_column(this.value, this.name, l2j_chars_table.value, 1);change_display('l2j_chars_hero_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_chars_hero_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+</table>
+<table id="structure_2_clan" style="display:none;" border="0" cellspacing="1" cellpadding="3">
+<tr><td>Table Name</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2j_clan_table" tabindex="11" value="[dbstruct_l2j_clan_table]" onblur="check_column(this.value, this.name, 0, 1);change_display('l2j_clan_table_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_clan_table_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+<tr><td>ID</td><td>&nbsp;</td><td>Clan Name</td><td>&nbsp;</td><td>Level</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2j_clan_id" tabindex="12" value="[dbstruct_l2j_clan_id]" onblur="check_column(this.value, this.name, l2j_clan_table.value, 1);change_display('l2j_clan_id_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_clan_id_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2j_clan_name" tabindex="13" value="[dbstruct_l2j_clan_name]" onblur="check_column(this.value, this.name, l2j_clan_table.value, 1);change_display('l2j_clan_name_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_clan_name_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2j_clan_level" tabindex="14" value="[dbstruct_l2j_clan_level]" onblur="check_column(this.value, this.name, l2j_clan_table.value, 1);change_display('l2j_clan_level_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_clan_level_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+<tr><td>Has Castle</td><td>&nbsp;</td><td>Ally Name</td><td>&nbsp;</td><td>Leader</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2j_clan_castle" tabindex="12" value="[dbstruct_l2j_clan_castle]" onblur="check_column(this.value, this.name, l2j_clan_table.value, 1);change_display('l2j_clan_castle_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_clan_castle_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2j_clan_ally" tabindex="13" value="[dbstruct_l2j_clan_ally]" onblur="check_column(this.value, this.name, l2j_clan_table.value, 1);change_display('l2j_clan_ally_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_clan_ally_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2j_clan_leader" tabindex="14" value="[dbstruct_l2j_clan_leader]" onblur="check_column(this.value, this.name, l2j_clan_table.value, 1);change_display('l2j_clan_leader_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_clan_leader_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+</table>
+<table id="structure_2_castle" style="display:none;" border="0" cellspacing="1" cellpadding="3">
+<tr><td>Table Name</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2j_castle_table" tabindex="11" value="[dbstruct_l2j_castle_table]" onblur="check_column(this.value, this.name, 0, 1);change_display('l2j_castle_table_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_castle_table_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+<tr><td>ID</td><td>&nbsp;</td><td>Castle Name</td><td>&nbsp;</td><td>Siege Date</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2j_castle_id" tabindex="12" value="[dbstruct_l2j_castle_id]" onblur="check_column(this.value, this.name, l2j_castle_table.value, 1);change_display('l2j_castle_id_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_castle_id_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2j_castle_name" tabindex="13" value="[dbstruct_l2j_castle_name]" onblur="check_column(this.value, this.name, l2j_castle_table.value, 1);change_display('l2j_castle_name_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_castle_name_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2j_castle_siege" tabindex="14" value="[dbstruct_l2j_castle_date]" onblur="check_column(this.value, this.name, l2j_castle_table.value, 1);change_display('l2j_castle_siege_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_castle_siege_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+</table>
+<table id="structure_2_npc" style="display:none;" border="0" cellspacing="1" cellpadding="3">
+<tr><td>Table Name</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2j_npc_table" tabindex="11" value="[dbstruct_l2j_npcs_table]" onblur="check_column(this.value, this.name, 0, 1);change_display('l2j_npc_table_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_npc_table_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+<tr><td>ID</td><td>&nbsp;</td><td>NPC Name</td><td>&nbsp;</td><td>Level</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2j_npc_id" tabindex="12" value="[dbstruct_l2j_npcs_id]" onblur="check_column(this.value, this.name, l2j_npc_table.value, 1);change_display('l2j_npc_id_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_npc_id_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2j_npc_name" tabindex="13" value="[dbstruct_l2j_npcs_name]" onblur="check_column(this.value, this.name, l2j_npc_table.value, 1);change_display('l2j_npc_name_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_npc_name_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2j_npc_level" tabindex="14" value="[dbstruct_l2j_npcs_level]" onblur="check_column(this.value, this.name, l2j_npc_table.value, 1);change_display('l2j_npc_level_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_npc_level_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+</table>
+<table id="structure_2_raids" style="display:none;" border="0" cellspacing="1" cellpadding="3">
+<tr><td>Table Name</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2j_raids_table" tabindex="11" value="[dbstruct_l2j_raids_table]" onblur="check_column(this.value, this.name, 0, 1);change_display('l2j_raids_table_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_raids_table_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+<tr><td>ID</td><td>&nbsp;</td><td>Respawn Time</td><td>&nbsp;</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2j_raids_id" tabindex="12" value="[dbstruct_l2j_raids_id]" onblur="check_column(this.value, this.name, l2j_raids_table.value, 1);change_display('l2j_raids_id_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_raids_id_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2j_raids_respawn" tabindex="13" value="[dbstruct_l2j_raids_time]" onblur="check_column(this.value, this.name, l2j_raids_table.value, 1);change_display('l2j_raids_respawn_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_raids_respawn_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+</table>
+<table id="structure_2_skills" style="display:none;" border="0" cellspacing="1" cellpadding="3">
+<tr><td>Table Name</td></tr>
+<tr><td><input type="text" id="field" name="l2j_skills_table" tabindex="11" value="[dbstruct_l2j_skills_table]" onblur="check_column(this.value, this.name, 0, 1);change_display('l2j_skills_table_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_skills_table_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+<tr><td>Char ID</td><td>&nbsp;</td><td>ID</td><td>&nbsp;</td><td>Level</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2j_skills_cid" tabindex="12" value="[dbstruct_l2j_skills_cid]" onblur="check_column(this.value, this.name, l2j_skills_table.value, 1);change_display('l2j_skills_cid_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_skills_cid_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2j_skills_id" tabindex="13" value="[dbstruct_l2j_skills_id]" onblur="check_column(this.value, this.name, l2j_skills_table.value, 1);change_display('l2j_skills_id_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_skills_id_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2j_skills_level" tabindex="13" value="[dbstruct_l2j_skills_level]" onblur="check_column(this.value, this.name, l2j_skills_table.value, 1);change_display('l2j_skills_level_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_skills_level_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+<tr><td>Class</td><td>&nbsp;</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2j_skills_class" tabindex="12" value="[dbstruct_l2j_skills_class]" onblur="check_column(this.value, this.name, l2j_skills_table.value, 1);change_display('l2j_skills_class_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_skills_class_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+</table>
+<table id="structure_2_items" style="display:none;" border="0" cellspacing="1" cellpadding="3">
+<tr><td>Table Name</td></tr>
+<tr><td><input type="text" id="field" name="l2j_items_table" tabindex="11" value="[dbstruct_l2j_items_table]" onblur="check_column(this.value, this.name, 0, 1);change_display('l2j_items_table_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_items_table_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+<tr><td>Char ID</td><td>&nbsp;</td><td>ID</td><td>&nbsp;</td><td>Count</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2j_items_cid" tabindex="12" value="[dbstruct_l2j_items_cid]" onblur="check_column(this.value, this.name, l2j_items_table.value, 1);change_display('l2j_items_cid_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_items_cid_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2j_items_id" tabindex="13" value="[dbstruct_l2j_items_id]" onblur="check_column(this.value, this.name, l2j_items_table.value, 1);change_display('l2j_items_id_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_items_id_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2j_items_count" tabindex="13" value="[dbstruct_l2j_items_count]" onblur="check_column(this.value, this.name, l2j_items_table.value, 1);change_display('l2j_items_count_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_items_count_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+<tr><td>Enchant</td><td>&nbsp;</td><td>Location</td><td>&nbsp;</td><td>Type</td></tr>
+<tr><td>
+<input type="text" id="field" name="l2j_items_enchant" tabindex="12" value="[dbstruct_l2j_items_enchant]" onblur="check_column(this.value, this.name, l2j_items_table.value, 1);change_display('l2j_items_enchant_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_items_enchant_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2j_items_loc" tabindex="13" value="[dbstruct_l2j_items_loc]" onblur="check_column(this.value, this.name, l2j_items_table.value, 1);change_display('l2j_items_loc_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_items_loc_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td><td>
+<input type="text" id="field" name="l2j_items_type" tabindex="13" value="[dbstruct_l2j_items_type]" onblur="check_column(this.value, this.name, l2j_items_table.value, 1);change_display('l2j_items_type_check', 'inline');" />
+</td><td>
+<img style="display:none;" height="15" width="15" id="l2j_items_type_check" alt="If green, column exists in database." title="If green, column exists in database." src="{checkNO.png]" />
+</td></tr>
+</table>
+</fieldset>
+<fieldset>
+<legend>Access Levels</legend>
+<p><u>Access levels can be added/edited/deleted by Admin Panel.</u></p>
+<table id="access_levels" border="0" cellspacing="1" cellpadding="3">
+<tr>
+<td>Banned User Access </td><td><input type="text" id="field" name="acc_lvl_0" tabindex="15" style="width:50px;text-align:center;" value="[config_access_levels_0]" /></td>
+<td>Normal User Access </td><td><input type="text" id="field" name="acc_lvl_1" tabindex="16" style="width:50px;text-align:center;" value="[config_access_levels_1]" /></td>
+<td>Event GM Access </td><td><input type="text" id="field" name="acc_lvl_2" tabindex="17" style="width:50px;text-align:center;" value="[config_access_levels_2]" /></td>
+</tr>
+<tr>
+<td>GM Access </td><td><input type="text" id="field" name="acc_lvl_3" tabindex="18" style="width:50px;text-align:center;" value="[config_access_levels_3]" /></td>
+<td>Head GM Access </td><td><input type="text" id="field" name="acc_lvl_4" tabindex="19" style="width:50px;text-align:center;" value="[config_access_levels_4]" /></td>
+<td>Owner Access </td><td><input type="text" id="field" name="acc_lvl_5" tabindex="20" style="width:50px;text-align:center;" value="[config_access_levels_5]" /></td>
+</tr>
+</table>
+</fieldset>
+<fieldset>
+<legend>Some Details</legend>
+<table id="details" border="0" cellspacing="1" cellpadding="3">
+<tr>
+<td>Chronicle </td><td><input type="text" id="field" name="server_chronicle" tabindex="21" value="[config_server_chronicle]" /></td>
+</tr>
+</table>
+<table id="other_details" border="0" cellspacing="1" cellpadding="3">
+<tr>
+<td>Server XP </td><td><input type="text" id="field" name="server_xp" tabindex="22" style="width:50px;text-align:center;" value="[config_server_xp]" /></td>
+<td>Server SP </td><td><input type="text" id="field" name="server_sp" tabindex="23" style="width:50px;text-align:center;" value="[config_server_sp]" /></td>
+<td>Server Drop </td><td><input type="text" id="field" name="server_drop" tabindex="24" style="width:50px;text-align:center;" value="[config_server_drop]" /></td>
+<td>Server Adena </td><td><input type="text" id="field" name="server_adena" tabindex="25" style="width:50px;text-align:center;" value="[config_server_adena]" /></td>
+</tr>
+</table>
+</fieldset>
+
+{step_done}
+<table align="center">
+<tr><td><div id="hover-green"><input type="submit" id="button" name="next" tabindex="50" value="NEXT" /></div></td></tr>
+</table>

@@ -1,0 +1,12 @@
+	<form style="display:inline;" action="https://www.moneybookers.com/app/payment.pl" method="post">
+			<input type="hidden" name="pay_to_email" value="{mb_mail}" />
+			<input type="hidden" name="status_url" value="[config_website_url]/?page=account&donate&mbipn={account_name}" />
+			<input type="hidden" name="language" value="EN" />
+			<input type="hidden" name="currency" value="{currency}" />
+			<input type="hidden" name="amount" value="{amount}" />
+			<input type="hidden" name="detail1_description" value="Donation Points" />
+			<input type="hidden" name="detail1_text" value="{account_name} account" />
+			<input type="image" src="{moneybookers.png]" border="0" name="submit" alt="Donate by moneybookers" />
+			</form>
+<br />
+- {moneybookers_points} points

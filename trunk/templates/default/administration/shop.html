@@ -1,0 +1,131 @@
+<td>
+<div style="margin-top:15px;">
+<div class="corner-bl"><div class="corner-br"><div class="corner-tl"><div class="corner-tr">
+<div id="cdata-text">
+<div class="typeface-js" style="font-family: AntiquaSSK;color:#ffffff;font-size:18px;text-align:center;">
+<div style="display:inline;float:left;margin-left:45px;position:static;">Shop System</div>
+</div>
+<br />
+<div id="sep-medium"></div>
+
+<div align="center" style="font-family: Verdana;color:#f4f9ff;font-size:10px;padding-top:15px;">
+{the_status}
+<form name="shop_system" action="?page=administration&shop" method="post">
+<table border="0" cellspacing="1" cellpadding="3">
+<tr><td>System Status</td><td><select tabindex="1" name="system_status">{system_status}</select></td></tr>
+</table>
+<fieldset style="text-align:left;padding:15px;">
+<legend>Refer Shop</legend>
+Refer Shop Status <select tabindex="2" name="refer_shop_status">{refer_shop_status}</select>
+<center>
+<br />
+<u>Refer Shop Items</u>
+<br /><br />
+
+<table id="clan-details" cellspacing="2" cellpadding="2">
+<tr>
+<th>#</th>
+<th>Item Name</th>
+<th>Item ID</th>
+<th>Item Count</th>
+<th>Item Enchant</th>
+<th>Item Price (points)</th>
+<th>Action</th>
+</tr>
+{refer_shop_items}
+<tr>
+<td>&nbsp;</td>
+<td><input type="text" tabindex="3" name="refer_item_name" value="{val_refer_item_name}" /></td>
+<td><input type="text" tabindex="4" name="refer_item_id" style="width:35px;" value="{val_refer_item_id}" /></td>
+<td><input type="text" tabindex="5" name="refer_item_count" style="width:35px;" value="{val_refer_item_count}" /></td>
+<td><input type="text" tabindex="6" name="refer_item_enchant" style="width:35px;" value="{val_refer_item_enchant}" /></td>
+<td><input type="text" tabindex="7" name="refer_item_price" style="width:35px;" value="{val_refer_item_price} "/></td>
+<td><input type="submit" style="background-image:none;width:50px;color:#d70000;text-decoration:underline;" name="add_refer" tabindex="8" value="ADD" /></div></td>
+</table>
+</center>
+</fieldset>
+<br /><br />
+<fieldset style="text-align:left;padding:15px;">
+<legend>Vote Shop</legend>
+Vote Shop Status <select tabindex="9" name="vote_shop_status">{vote_shop_status}</select>
+<center>
+<br />
+<u>Vote Shop Items</u>
+<br /><br />
+
+<table id="clan-details" cellspacing="2" cellpadding="2">
+<tr>
+<th>#</th>
+<th>Item Name</th>
+<th>Item ID</th>
+<th>Item Count</th>
+<th>Item Enchant</th>
+<th>Item Price (points)</th>
+<th>Action</th>
+</tr>
+{vote_shop_items}
+<tr>
+<td>&nbsp;</td>
+<td><input type="text" tabindex="10" name="vote_item_name" value="{val_vote_item_name}" /></td>
+<td><input type="text" tabindex="11" name="vote_item_id" style="width:35px;" value="{val_vote_item_id}" /></td>
+<td><input type="text" tabindex="12" name="vote_item_count" style="width:35px;" value="{val_vote_item_count}" /></td>
+<td><input type="text" tabindex="13" name="vote_item_enchant" style="width:35px;" value="{val_vote_item_enchant}" /></td>
+<td><input type="text" tabindex="14" name="vote_item_price" style="width:35px;" value="{val_vote_item_price}" /></td>
+<td><input type="submit" style="background-image:none;width:50px;color:#d70000;text-decoration:underline;" name="add_vote" tabindex="15" value="ADD" /></div></td>
+</table>
+</center>
+</fieldset>
+<br /><br />
+<fieldset style="text-align:left;padding:15px;">
+<legend>Donate Shop</legend>
+Donate Shop Status <select tabindex="16" name="donate_shop_status">{donate_shop_status}</select>
+<center>
+<br />
+<u>Donate Shop Items</u>
+<br /><br />
+
+<table id="clan-details" cellspacing="2" cellpadding="2">
+<tr>
+<th>#</th>
+<th>Item Name</th>
+<th>Item ID</th>
+<th>Item Count</th>
+<th>Item Enchant</th>
+<th>Item Price (points)</th>
+<th>Action</th>
+</tr>
+{donate_shop_items}
+<tr>
+<td>&nbsp;</td>
+<td><input type="text" tabindex="17" name="donate_item_name" value="{val_donate_item_name}" /></td>
+<td><input type="text" tabindex="18" name="donate_item_id" style="width:35px;" value="{val_donate_item_id}" /></td>
+<td><input type="text" tabindex="19" name="donate_item_count" style="width:35px;" value="{val_donate_item_count}" /></td>
+<td><input type="text" tabindex="20" name="donate_item_enchant" style="width:35px;" value="{val_donate_item_enchant}" /></td>
+<td><input type="text" tabindex="21" name="donate_item_price" style="width:35px;" value="{val_donate_item_price}" /></td>
+<td><input type="submit" style="background-image:none;width:50px;color:#d70000;text-decoration:underline;" name="add_donate" tabindex="22" value="ADD" /></div></td>
+</table>
+</center>
+</fieldset>
+<br /><br />
+<fieldset style="text-align:left;padding:15px;">
+<legend>Reward Send Settings</legend>
+<center>
+
+<table cellspacing="5" cellpadding="5">
+{reward_settings}
+</table>
+
+</center>
+</fieldset>
+<br /><br />
+<br />
+<input type="submit" id="button" name="save" tabindex="26" value="SAVE" />
+
+</form>
+</div>
+</div>
+</div>
+</div></div></div></div>
+
+</td>
+</tr>

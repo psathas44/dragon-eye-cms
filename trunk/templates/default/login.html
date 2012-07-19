@@ -1,0 +1,59 @@
+<tr>
+<td>
+<div style="margin-top:15px;">
+<div class="corner-bl"><div class="corner-br"><div class="corner-tl"><div class="corner-tr">
+<div id="cdata-text">
+<div class="typeface-js" style="font-family: AntiquaSSK;color:#ffffff;font-size:18px;text-align:center;">
+<div style="display:inline;float:left;margin-left:45px;position:static;">[lang_login]</div>
+</div>
+<br />
+<div id="sep-medium"></div>
+<br />
+<div align="center" style="font-family: Verdana;color:#f4f9ff;font-size:10px;">
+
+{status}
+<form name="login" action="?page=account" method="post">
+
+	<table>
+
+		<tr>
+			<td><b>[lang_user] :</b>
+			</td>
+			<td><input type="text" name="login_username" value="{val_user}" />
+			</td>
+		</tr>
+
+		<tr>
+			<td><b>[lang_pass] :</b>
+			</td>
+			<td><input type="password" name="login_password" value="{val_pass}" onfocus="this.value=''" />
+			</td>
+		</tr>
+
+		<tr>
+			<td><input type="checkbox" name="login_remember" value="1" {val_remember}/>
+			</td>
+			<td>[lang_remember]</td>
+		</tr>
+
+		<tr>
+			<td><input type="submit" name="login_submit"
+				value="[lang_login]" />
+			</td>
+			<td>&nbsp;</td>
+		</tr>
+
+	</table>
+	<list>
+		<li>[lang_noacc]</li>
+		<li>Forgot your password? Recover it <a href="?page=account&pass_recover">here</a>.</li>
+	</list>
+
+</form>
+</div>
+</div>
+</div>
+</div></div></div></div>
+
+</td>
+</tr>

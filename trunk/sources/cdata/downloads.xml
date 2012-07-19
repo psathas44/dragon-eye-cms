@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contents>
+	<content>
+		<author>teSt</author>
+		<title>Patch Download:</title>
+		<date>09/07/2011</date>
+		<message>&lt;a href=&quot;http://&quot;&gt;Mirror 1&lt;/a&gt; &lt;a href=&quot;http://&quot;&gt;Mirror 2&lt;/a&gt;</message>
+	</content>
+	<content>
+		<author>teSt</author>
+		<title>Client Download:</title>
+		<date>09/07/2011</date>
+		<message>&lt;a href=&quot;http://lineage2.com&quot; target=&quot;_blank&quot;&gt;Mirror 1&lt;/a&gt;</message>
+	</content>
+</contents>
